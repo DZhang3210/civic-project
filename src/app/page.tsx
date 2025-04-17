@@ -2,6 +2,7 @@
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useVirtualizer } from "@tanstack/react-virtual";
+import Link from "next/link";
 import { useRef, useEffect } from "react";
 
 type NumberResponse = {
@@ -69,8 +70,23 @@ export default function Home() {
         <h1 className="text-3xl font-bold mb-2 text-white">
           Infinite Integer List
         </h1>
-        <h2 className="text-sm text-gray-300 mb-6">
-          Latency is simulated to demonstrate pagination
+        <h2 className="text-sm text-white mb-6">
+          Latency is simulated to demonstrate pagination, Demo on{" "}
+          <Link
+            href="https://www.loom.com/share/a31bbdeb66444925b5db01791153d6cd?sid=bd3ba53d-1e76-49cd-9099-c1570a0b1a57"
+            target="_blank"
+            className="text-blue-400 hover:text-blue-300"
+          >
+            Loom
+          </Link>
+          {" | "}
+          <Link
+            href="https://github.com/DZhang3210/civic-project"
+            target="_blank"
+            className="text-blue-400 hover:text-blue-300"
+          >
+            Github
+          </Link>
         </h2>
         <div
           ref={parentRef}
